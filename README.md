@@ -54,3 +54,7 @@ The perfume-spray film was provided by the site owner. Confirm the video is lice
 ## External fragrance resources (About page)
 
 The About page includes three links to external fragrance references: Fragrantica, Parfumo and the International Fragrance Association (IFRA). Links open a new tab with `rel="noopener noreferrer"`; they are independent third-party sites and are not affiliated with ScentVault.
+
+## About page media placement (2026-11-20)
+
+The native MP4 slow-motion perfume video is positioned immediately below the About page introduction, before the branded SCENTVAULT bottle story. The FAQ and external resource links follow below.
