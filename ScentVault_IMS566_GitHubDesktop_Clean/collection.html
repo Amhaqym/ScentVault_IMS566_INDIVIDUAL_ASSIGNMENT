@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore owned fragrances, wishlist items and the 72-fragrance catalogue with detailed variants.">
+  <meta name="theme-color" content="#1c1b19">
+  <title>My Collection | ScentVault</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5: responsive grid, forms, spacing and accessibility utilities. -->
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css?v=2.0-refined" rel="stylesheet">
+</head>
+<body><div id="siteHeader"></div><main class="site-main" id="main-content">
+  <div class="topline"><span>SCENTVAULT / FRAGRANCE LIBRARY</span><span class="topline-right">YOUR PERSONAL SCENT INDEX</span></div>
+  <header class="page-intro"><p class="eyebrow">THE PERSONAL ARCHIVE</p><h1>My fragrances<span class="heading-dot">.</span></h1><p class="muted">The bottles on your shelf, the scents on your mind, and everything worth discovering.</p></header>
+  <div class="collection-action-bar"><div><span class="data-tag">PRIVATE ARCHIVE</span><p class="muted small">Changes are temporary for this visit; refresh restores the curated sample.</p></div><div class="collection-action-buttons"><button class="btn btn-gold" type="button" id="addPerfumeBtn">+ Add fragrance</button><button class="btn btn-outline-ink" type="button" id="exportCollectionBtn">Export CSV ↓</button></div></div>
+  <div class="tab-bar" role="tablist" aria-label="Fragrance collections"><button type="button" class="tab-button active" data-tab="owned" role="tab" aria-selected="true">Owned <span class="tab-count">12</span></button><button type="button" class="tab-button" data-tab="wishlist" role="tab" aria-selected="false">Wishlist <span class="tab-count">8</span></button><button type="button" class="tab-button" data-tab="catalogue" role="tab" aria-selected="false">Full catalogue <span class="tab-count">72</span></button></div>
+  <section class="surface-card collection-tools" aria-label="Browse and filter fragrances">
+    <div class="tool-primary"><label for="collectionSearch" class="form-label">SEARCH THE LIBRARY</label><input class="form-control lux-input" type="search" id="collectionSearch" placeholder="Search perfume or brand…"></div>
+    <div class="tool-control"><label class="form-label" for="originSelect">ORIGIN</label><select class="form-select lux-input" id="originSelect"><option value="all">All origins</option><option>Arabian</option><option>Malaysian</option><option>Indonesian</option><option value="International">International</option></select></div>
+    <div class="tool-control"><label class="form-label" for="brandSelect">BRAND</label><select class="form-select lux-input" id="brandSelect"><option value="all">All brands</option></select></div>
+    <div class="tool-control"><label class="form-label" for="categorySelect">SCENT FAMILY</label><select class="form-select lux-input" id="categorySelect"><option value="all">All families</option></select></div>
+    <div class="tool-control"><label class="form-label" for="priceMaxSelect">MAX PRICE</label><select class="form-select lux-input" id="priceMaxSelect"><option value="all">Any budget</option><option value="100">Up to RM100</option><option value="300">Up to RM300</option><option value="800">Up to RM800</option><option value="1000">Up to RM1,000</option><option value="2500">Up to RM2,500</option></select></div>
+    <div class="tool-control"><label class="form-label" for="sortSelect">SORT</label><select class="form-select lux-input" id="sortSelect"><option value="name">Name · A–Z</option><option value="brand">Brand · A–Z</option><option value="category">Scent family</option><option value="price-low">Price · low first</option><option value="price-high">Price · high first</option></select></div>
+    <div class="tool-last"><button type="button" id="clearFilters" class="filter-reset">Reset filters</button><div class="view-switch" role="group" aria-label="Collection view"><button type="button" class="active" data-view="grid" aria-pressed="true" aria-label="Grid view">▦</button><button type="button" data-view="table" aria-pressed="false" aria-label="Table view">☷</button></div></div>
+  </section>
+  <div class="list-meta"><p id="listDescription" class="muted small" aria-live="polite"></p><span>PRICES IN MYR · COLLECTOR REFERENCE</span></div>
+  <section id="collectionResults" aria-label="Fragrance results"></section><nav id="collectionPagination" class="catalogue-pagination" aria-label="Catalogue pagination"></nav>
+  <p class="section-footnote">Catalogue prices are fixed reference values chosen by the collector, not live retail quotations. Suggested perfumes are marked.</p>
+</main><div id="siteFooter"></div>
+<dialog id="detailDialog" class="detail-dialog" aria-labelledby="detailHeading"><div class="detail-dialog-inner"><button type="button" id="closeDetails" class="dialog-close" aria-label="Close perfume details">×</button><div id="detailContent"></div></div></dialog>
+<dialog id="editDialog" class="detail-dialog edit-dialog" aria-labelledby="editHeading"><form id="editForm" class="detail-dialog-inner" novalidate><button type="button" class="dialog-close" id="closeEdit" aria-label="Close fragrance form">×</button><p class="eyebrow">YOUR PERSONAL ARCHIVE</p><h2 id="editHeading">Add a fragrance</h2><p class="muted small" id="editLead">Choose a fragrance from the catalogue, then personalise your entry.</p>
+  <input type="hidden" id="editMode" value="owned"><input type="hidden" id="editId">
+  <div class="form-field"><label for="editCatalogue" class="form-label">FRAGRANCE</label><select id="editCatalogue" class="form-select lux-input" required></select></div>
+  <div class="form-grid-2"><div class="form-field"><label for="editPrice" class="form-label">PURCHASE PRICE (RM)</label><input id="editPrice" type="number" class="form-control lux-input" required min="0" step="0.01"></div><div class="form-field"><label for="editDate" class="form-label">DATE ACQUIRED</label><input id="editDate" type="date" class="form-control lux-input"></div></div>
+  <div class="form-grid-2"><div class="form-field"><label for="editRating" class="form-label">PERSONAL RATING</label><select id="editRating" class="form-select lux-input"><option value="">Not rated</option><option value="1">★ 1 / 5</option><option value="2">★★ 2 / 5</option><option value="3">★★★ 3 / 5</option><option value="4">★★★★ 4 / 5</option><option value="5">★★★★★ 5 / 5</option></select></div><div class="form-field"><label for="editPriority" class="form-label">WISHLIST PRIORITY</label><select id="editPriority" class="form-select lux-input"><option>Medium</option><option>High</option><option>Low</option></select></div></div>
+  <div class="form-field"><label for="editNotes" class="form-label">PERSONAL NOTE (OPTIONAL)</label><textarea id="editNotes" class="form-control lux-input" rows="3" maxlength="400" placeholder="What makes this fragrance memorable?"></textarea></div>
+  <label class="check-label" id="favoriteWrapper"><input id="editFavorite" type="checkbox"> Add to favourites</label>
+  <div id="editError" class="auth-message d-none" role="alert"></div>
+  <div class="modal-actions"><button type="button" class="btn btn-outline-ink" id="cancelEdit">Cancel</button><button type="submit" class="btn btn-gold" id="saveEdit">Save fragrance →</button></div></form></dialog>
+  <script src="js/data.js?v=2.0-refined"></script><script src="js/app.js?v=2.0-refined"></script><script src="js/collection.js?v=2.0-refined"></script>
+</body></html>

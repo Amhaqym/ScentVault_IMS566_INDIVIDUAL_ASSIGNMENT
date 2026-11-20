@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A clear overview of your fragrance collection, collection value and wishlist priorities.">
+  <meta name="theme-color" content="#1c1b19">
+  <title>Dashboard | ScentVault</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5: responsive grid, forms, spacing and accessibility utilities. -->
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css?v=2.0-refined" rel="stylesheet">
+</head>
+<body><div id="siteHeader"></div>
+  <main class="site-main" id="main-content">
+    <div class="topline"><span>SCENTVAULT / OVERVIEW</span><span class="topline-right">THE COLLECTION EDITION · 2026</span></div>
+    <section class="hero-lux" aria-labelledby="dashboardTitle">
+      <div class="hero-copy"><p class="eyebrow text-gold">THE PRIVATE FRAGRANCE ARCHIVE</p><h1 id="dashboardTitle">A collection<br>worth <em>remembering.</em></h1><p>Twelve scents, many stories. Keep track of what you own, what you love and what comes next.</p><a class="btn btn-gold" href="collection.html">View my collection <span aria-hidden="true">↗</span></a></div>
+      <img class="hero-photo" src="assets/images/scentvault-branded-bottle.jpg" alt="Black perfume bottle featuring the SCENTVAULT gold insignia">
+      <div class="hero-caption">CURATE / COLLECT / DISCOVER</div>
+    </section>
+    <section class="catalogue-overview-strip" aria-label="Curated catalogue"><span>THE SCENT INDEX</span><strong id="cataloguePulse">72 fragrances · 24 brands · 4 origins</strong><a href="collection.html#catalogue">Browse the catalogue ↗</a></section>
+    <section class="section-space" aria-labelledby="overviewTitle"><div class="section-heading"><div><p class="eyebrow">AT A GLANCE</p><h2 id="overviewTitle">Collection overview</h2><p class="muted">A measured look at your fragrance wardrobe.</p></div><span class="data-tag">CURATED DATASET</span></div><div class="kpi-grid" id="kpiGrid"></div></section>
+    <section class="section-space" aria-labelledby="insightsTitle"><div class="section-heading"><div><p class="eyebrow">INSIGHTS</p><h2 id="insightsTitle">What your shelves say</h2></div><a class="text-link" href="analytics.html">All analytics ↗</a></div><div class="row g-3"><div class="col-12 col-xl-6"><article class="surface-card chart-panel"><div class="panel-heading"><span>01 / SCENT PROFILE</span><h3>Fragrance families</h3><p class="muted">Owned perfumes by scent family</p></div><div class="chart-wrap"><canvas id="categoryChart" role="img" aria-label="Doughnut chart showing fragrance family shares"></canvas></div><p id="categoryEmpty" class="chart-empty d-none">No fragrances recorded.</p></article></div><div class="col-12 col-xl-6"><article class="surface-card chart-panel"><div class="panel-heading"><span>02 / COLLECTION ORIGINS</span><h3>Where your scents come from</h3><p class="muted">Browsing regions of the owned collection</p></div><div class="chart-wrap"><canvas id="originChart" role="img" aria-label="Doughnut chart showing collection origins"></canvas></div><p id="originEmpty" class="chart-empty d-none">No regional data recorded.</p></article></div></div></section>
+    <section class="section-space" aria-labelledby="finderHeading"><div class="finder-panel"><div class="finder-heading"><p class="eyebrow text-gold">FIND YOUR NEXT BOTTLE</p><h2 id="finderHeading">A little direction for<br><em>your next discovery.</em></h2><p>Choose a scent style and a price ceiling; explore matching fragrances from the 72-entry catalogue.</p></div><form id="finderForm" class="finder-form"><label for="finderFamily">SCENT FAMILY</label><select id="finderFamily" class="form-select lux-input"><option value="all">Any scent family</option></select><label for="finderBudget">BUDGET</label><select id="finderBudget" class="form-select lux-input"><option value="300">Up to RM300</option><option value="800">Up to RM800</option><option value="1500">Up to RM1,500</option><option value="3000">Any price</option></select><button type="submit" class="btn btn-gold">Find fragrances ↗</button></form><div id="finderResults" class="finder-results" aria-live="polite"></div></div></section>
+    <section class="section-space" aria-label="Collection activity"><div class="row g-3"><div class="col-12 col-xl-7"><article class="surface-card activity-panel"><div class="section-heading compact"><h3>Recently added</h3><a href="collection.html" class="text-link">All perfumes ↗</a></div><div id="recentList"></div></article></div><div class="col-12 col-xl-5"><article class="surface-card activity-panel"><div class="section-heading compact"><h3>Wishlist priorities</h3><a href="collection.html#wishlist" class="text-link">View wishlist ↗</a></div><div id="wishlistSummary"></div></article></div></div></section>
+  </main><div id="siteFooter"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script><script src="js/offline-charts.js?v=1.4"></script><script src="js/data.js?v=2.0-refined"></script><script src="js/app.js?v=2.0-refined"></script><script src="js/dashboard.js?v=2.0-refined"></script>
+</body></html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse 24 perfume houses across four fragrance origin groups, each with three curated perfumes.">
+  <meta name="theme-color" content="#1c1b19">
+  <title>Brand Directory | ScentVault</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5: responsive grid, forms, spacing and accessibility utilities. -->
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css?v=2.0-refined" rel="stylesheet">
+</head>
+<body><div id="siteHeader"></div><main class="site-main" id="main-content">
+  <div class="topline"><span>SCENTVAULT / THE HOUSES</span><span class="topline-right">AN INDEX OF 24 FRAGRANCE BRANDS</span></div>
+  <header class="page-intro"><p class="eyebrow">THE HOUSES BEHIND THE BOTTLES</p><h1>Brand directory<span class="heading-dot">.</span></h1><p class="muted">Six houses from each of four fragrance regions. Discover their scents, reference prices and place in your collection.</p></header>
+  <section class="directory-intro" aria-label="Directory statistics"><div><strong>24</strong><span>FRAGRANCE HOUSES</span></div><div><strong>04</strong><span>CURATED REGIONS</span></div><div><strong>72</strong><span>FRAGRANCES INDEXED</span></div></section>
+  <section class="directory-filter" aria-label="Filter fragrance brands"><div><label class="form-label" for="brandSearch">SEARCH BY BRAND</label><input class="form-control lux-input" id="brandSearch" type="search" placeholder="Try Afnan, Dior, Opai…"></div><div><label class="form-label" for="brandRegion">FILTER BY REGION</label><select class="form-select lux-input" id="brandRegion"><option value="all">All regions</option><option>Arabian</option><option>Malaysian</option><option>Indonesian</option><option value="International">International</option></select></div></section>
+  <div class="compare-toolbar"><p class="muted small">Select up to three brands to compare their prices, origin and collection coverage.</p><button type="button" class="btn btn-outline-ink" id="compareBrands" disabled>Compare selected <span id="compareCount">(0)</span> ↗</button></div>
+  <div class="directory-header"><h2>Explore the houses</h2><p id="brandCount" class="muted small" aria-live="polite">24 brands</p></div><section id="brandResults" class="brand-list" aria-label="Fragrance houses"></section>
+</main><div id="siteFooter"></div>
+<dialog id="compareDialog" class="detail-dialog compare-dialog" aria-labelledby="compareHeading"><div class="detail-dialog-inner"><button type="button" class="dialog-close" id="closeCompare" aria-label="Close brand comparison">×</button><p class="eyebrow">THE FRAGRANCE HOUSES</p><h2 id="compareHeading">Compare brands</h2><div id="compareResults" class="table-scroll"></div></div></dialog><script src="js/data.js?v=2.0-refined"></script><script src="js/app.js?v=2.0-refined"></script><script src="js/brands.js?v=1.4.2"></script>
+</body></html>
