@@ -9,7 +9,7 @@ ScentVault is a front-end perfume collection management website. The project has
 - `collection.html` — owned perfumes, wishlist and full catalogue
 - `brands.html` — brand directory
 - `analytics.html` — fragrance and financial insights
-- `about.html` — introduction and fragrance-care FAQ
+- `about.html` — introduction, perfume spray video and fragrance-care FAQ
 - `contact.html` — client-side contact form
 
 ## Features and assets
@@ -21,6 +21,7 @@ ScentVault is a front-end perfume collection management website. The project has
 - Bootstrap 5 CSS is bundled locally. The optional Chart.js CDN has a local chart fallback.
 - The local `assets/images/scentvault-branded-bottle.jpg` visual appears on the login, Dashboard and About pages.
 - Black-marble styling is implemented with `assets/images/black-marble.webp`.
+- The About page includes a user-provided 10.6-second HD fragrance spray video at `assets/videos/perfume-spray-slow-motion.mp4` and a local poster image. Playback is manual (no autoplay) with native controls; the initial playback state is muted.
 - `assets/images/perfumes/IMAGE_MAPPING.csv` helps match photo IDs to fragrances when replacing images.
 
 ## Open locally
@@ -34,14 +35,22 @@ Open the folder containing `index.html` in Visual Studio Code and use **Open wit
 
 ## Publish with GitHub Desktop and GitHub Pages
 
-1. Extract this archive into the folder you will publish, for example `IMS566_INDIVIDUAL_ASSIGNMENT`.
+1. Extract this archive into the folder you will publish, for example `ScentVault_IMS566_INDIVIDUAL_ASSIGNMENT`.
 2. Check that **`index.html` is directly inside that folder**, alongside `css/`, `js/` and `assets/`.
-3. In GitHub Desktop, add that folder as a local repository (or create the repository there), commit the files and publish it as a **public** repository named `IMS566_INDIVIDUAL_ASSIGNMENT`.
+3. In GitHub Desktop, add that folder as a local repository (or create the repository there), commit the files and publish it as a **public** repository named `ScentVault_IMS566_INDIVIDUAL_ASSIGNMENT`.
 4. On GitHub, go to the repository **Settings → Pages → Build and deployment**. Set **Source: Deploy from a branch**, **Branch: main**, **Folder: /(root)** and save.
-5. After deployment, open the URL shown in GitHub Pages settings and test all links and photos. The usual format is `https://YOUR-USERNAME.github.io/IMS566_INDIVIDUAL_ASSIGNMENT/`.
+5. After deployment, open the URL shown in GitHub Pages settings and test all links and photos. The usual format is `https://YOUR-USERNAME.github.io/ScentVault_IMS566_INDIVIDUAL_ASSIGNMENT/`.
 
 The ZIP must be extracted before uploading; do not add the ZIP itself as the website. Upload the contents as individual files.
 
 ## Attribution and limitations
 
 See `THIRD_PARTY_NOTICES.md` for library licenses. Product images were supplied for the assignment; check you have permission to publish or redistribute third-party product photographs in a public repository. Fixed catalogue reference prices and some listed perfume specifications are curated project data, not live retail offers.
+
+## About page video update
+
+The perfume-spray film was provided by the site owner. Confirm the video is licensed for public publishing before distributing the repository. To update the published GitHub Pages site, replace `about.html`, `css/style.css`, `README.md`, and copy the `assets/videos/` directory into the root of the existing repository. Commit and push via GitHub Desktop; do not create a second repository.
+
+## External fragrance resources (About page)
+
+The About page includes three links to external fragrance references: Fragrantica, Parfumo and the International Fragrance Association (IFRA). Links open a new tab with `rel="noopener noreferrer"`; they are independent third-party sites and are not affiliated with ScentVault.

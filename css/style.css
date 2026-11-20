@@ -683,3 +683,60 @@ img {max-width:100%}
   min-width: 16px;
   margin: 0;
 }
+
+
+/* About — The Art of Fragrance: local, native, responsive video player.
+   Marble remains behind the film panel; no autoplay and no remote video embed. */
+.fragrance-film {
+  --film-gold: #cbb081;
+  display:grid;
+  grid-template-columns: minmax(0,.78fr) minmax(0,1.42fr);
+  align-items:center;
+  gap:clamp(22px,3.4vw,58px);
+  margin-top:clamp(34px,4.5vw,68px);
+  padding:clamp(24px,4vw,58px);
+  color:#f7f0e3;
+  border:1px solid #64543d;
+  background-color:#171411;
+  background-image: linear-gradient(100deg,rgba(18,16,15,.86),rgba(18,16,15,.55)),var(--sv-marble);
+  background-position:center;
+  background-size:cover;
+  overflow:hidden;
+}
+.fragrance-film__intro {min-width:0}
+.fragrance-film__intro .eyebrow {margin-bottom:19px;letter-spacing:.18em;color:var(--film-gold)}
+.fragrance-film__intro h2 {color:#fbf5e9;font:500 clamp(32px,3.6vw,58px)/1.11 var(--serif);margin:0 0 20px}
+.fragrance-film__intro h2 em {font-weight:400;color:var(--film-gold)}
+.fragrance-film__intro p:not(.eyebrow) {font:400 clamp(13px,1.25vw,15px)/1.8 var(--narrow);color:#e5d9c8;max-width:31ch;margin:0 0 27px}
+.fragrance-film__detail {display:block;max-width:100%;font:750 9px/1.7 var(--narrow);letter-spacing:.16em;color:#cdb893;overflow-wrap:anywhere}
+.fragrance-film__media {min-width:0;margin:0}
+.fragrance-film__video {display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#050505;border:1px solid rgba(222,193,143,.52);box-shadow:0 20px 40px rgba(0,0,0,.32)}
+.fragrance-film__media figcaption {margin-top:11px;color:#cab28c;font:750 9px/1.5 var(--narrow);letter-spacing:.17em;text-align:right}
+@media(max-width:760px){
+  .fragrance-film{grid-template-columns:minmax(0,1fr);gap:22px;padding:24px 18px;margin-top:30px}
+  .fragrance-film__intro h2{font-size:clamp(31px,8vw,45px);margin-bottom:12px}
+  .fragrance-film__intro p:not(.eyebrow){max-width:50ch;margin-bottom:13px}
+  .fragrance-film__detail{font-size:8px}
+}
+
+
+/* About — curated external fragrance reference links.
+   Open in a new tab and retain keyboard focus indicators for accessibility. */
+.sv-resources__heading {margin-bottom:20px;}
+.sv-resources__heading h2 {font:500 clamp(31px,3.5vw,49px)/1.17 var(--serif,Georgia,serif);color:var(--ink,#221f1b);margin:0 0 9px;}
+.sv-resources__heading h2 em {color:#947240;font-weight:400;}
+.sv-resources__heading .muted {max-width:60ch;}
+.sv-resources__grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.sv-resource {display:flex;flex-direction:column;gap:0;min-width:0;padding:27px 25px 23px;border:1px solid #d9c9b0;background:#fffdfa;text-decoration:none!important;color:#27211a;transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;}
+.sv-resource:hover {border-color:#9b783f;box-shadow:0 15px 38px rgba(40,28,13,.10);transform:translateY(-3px);color:#27211a;}
+.sv-resource:focus-visible {outline:3px solid #9b783f;outline-offset:4px;}
+.sv-resource__index {font:750 10px/1.4 var(--narrow,Arial,sans-serif);letter-spacing:.16em;color:#9b783f;}
+.sv-resource h3 {font:500 clamp(22px,2.3vw,30px)/1.22 var(--serif,Georgia,serif);margin:19px 0 10px;color:#201a13;}
+.sv-resource p {font:400 13px/1.75 var(--narrow,Arial,sans-serif);color:#726655;margin:0 0 23px;max-width:40ch;flex:1;}
+.sv-resource__action {display:inline-flex;align-items:center;gap:5px;font:750 11px/1.4 var(--narrow,Arial,sans-serif);color:#846435;letter-spacing:.04em;}
+.sv-resource__action .sv-arrow {transition:transform .25s ease;}
+.sv-resource:hover .sv-resource__action .sv-arrow {transform:translate(2px,-2px);}
+.sv-resources__note {font:400 11px/1.55 var(--narrow,Arial,sans-serif);color:#796d5d;margin:13px 0 0;}
+@media(max-width:900px) {.sv-resources__grid {grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:620px) {.sv-resources__grid {grid-template-columns:minmax(0,1fr);gap:11px;}.sv-resource {padding:23px 21px 20px;}.sv-resource h3{margin:12px 0 8px;}.sv-resource p{margin-bottom:16px;}}
+@media(prefers-reduced-motion:reduce){.sv-resource,.sv-resource__action .sv-arrow{transition:none;}.sv-resource:hover{transform:none;}}
