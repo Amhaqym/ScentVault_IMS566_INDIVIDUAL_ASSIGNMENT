@@ -659,3 +659,27 @@ img {max-width:100%}
   .hero-lux::after {background:linear-gradient(0deg,rgba(17,16,15,.94) 0%,rgba(17,16,15,.83) 33%,rgba(17,16,15,.26) 75%,rgba(17,16,15,.08) 100%);}
 }
 @media(prefers-reduced-motion:reduce){.hero-lux .hero-photo,.hero-lux::after,.sidebar-signout {transition:none;transform:none;}}
+
+
+/* Mobile-safe action arrow: pure SVG mask, never an emoji glyph.
+   The same vector is rendered across iOS Safari, Android and desktop. */
+.sv-arrow {
+  display: inline-block;
+  width: .93em;
+  height: .93em;
+  min-width: .93em;
+  margin-left: .28em;
+  vertical-align: -.08em;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M7 7h10v10'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M7 7h10v10'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+/* Avoid inherited oversized spacing from generic gold button spans. */
+.btn-gold .sv-arrow { margin-left: .45em; }
+/* Icon is pinned at top-right on Scent Finder match cards. */
+.finder-matches b.sv-arrow {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin: 0;
+}

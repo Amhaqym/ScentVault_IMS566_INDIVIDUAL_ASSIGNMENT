@@ -64,7 +64,7 @@ window.SV = (() => {
             ${directLink('contact.html','Contact Us')}
           </nav>
         </div>
-        <div class="sidebar-bottom"><div class="side-monogram" aria-hidden="true">S</div><div class="sidebar-profile"><strong>Private collection</strong><small>Curated fragrance archive</small></div><button type="button" class="sidebar-signout" id="signOutBtn" aria-label="Sign out and return to login">Sign Out <span aria-hidden="true">↗</span></button></div>
+        <div class="sidebar-bottom"><div class="side-monogram" aria-hidden="true">S</div><div class="sidebar-profile"><strong>Private collection</strong><small>Curated fragrance archive</small></div><button type="button" class="sidebar-signout" id="signOutBtn" aria-label="Sign out and return to login">Sign Out <span class="sv-arrow" aria-hidden="true"></span></button></div>
       </aside>`;
 
     document.getElementById('signOutBtn').addEventListener('click', () => {
